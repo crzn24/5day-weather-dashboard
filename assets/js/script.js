@@ -27,7 +27,7 @@ var humidityEl = document.getElementById("humidity");
 // get from local storage to show history
 
 
-// save to local storage?
+// save to local storage city name only
 
 
 
