@@ -1,4 +1,7 @@
 ////// Important DOM elements////////
+//search element
+var searchCityEl = document.getElementById("search-city");
+var searchBtn = document.getElementById("search-button");
 //selected city elements
 var currentCity = document.getElementById("current-city");
 var temperatureEl = document.getElementById("temperature");
