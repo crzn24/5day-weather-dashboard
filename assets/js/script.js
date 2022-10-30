@@ -4,6 +4,7 @@ var searchCityEl = document.getElementById("search-city");
 var searchBtn = document.getElementById("search-button");
 var pastCitiesEl = document.getElementById("past-cities");
 //selected city elements
+var todaysWeatherEl = document.getElementById("todays-weather");
 var currentCity = document.getElementById("current-city");
 var temperatureEl = document.getElementById("temperature");
 var windEl = document.getElementById("wind");
