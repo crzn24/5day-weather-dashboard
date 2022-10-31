@@ -10,7 +10,8 @@ var temperatureEl = document.getElementById("temperature");
 var windEl = document.getElementById("wind");
 var humidityEl = document.getElementById("humidity");
 
-
+//API key for weather
+const apiKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
 
 // function to get weather from weather api
