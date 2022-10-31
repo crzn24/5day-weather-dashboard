@@ -30,7 +30,9 @@ const apiKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
 ////// Local Storage /////////
 // get from local storage to show history
+// function getHistory {
 
+// }
 
 // save to local storage city name only
 
