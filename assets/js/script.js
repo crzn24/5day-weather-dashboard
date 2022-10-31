@@ -15,8 +15,7 @@ const apiKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
 
 // function to get weather from weather api
-
-
+// https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 
 
 // take information given and display it in the dashboard 
