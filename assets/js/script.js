@@ -14,11 +14,28 @@ var humidityEl = document.getElementById("humidity");
 const APIKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
 
-// function to get weather from weather api
+/////////// function to get weather from weather api
 // https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+// call api for coordinates 
+//http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCityEl + "&appid=" + APIKey;
+
+// "api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" + APIKey;
+
+function getWeather() {
+    
+    fetch(queryURL)
+        .then(function (response) {
+            return response.json();
+         })
+        .then(function (data) {
+            console.log(data);
+        })
+}
+
+
 
 // take information given and display it in the dashboard 
 
@@ -27,6 +44,13 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity
 // function to get 5 day forecast
 
 // take info and display it into 5 day forecast
+
+
+
+
+// button event listener
+searchBtn.addEventListener("click", getWeather);
+
 
 
 
