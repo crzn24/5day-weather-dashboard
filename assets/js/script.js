@@ -22,6 +22,7 @@ const APIKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCityEl + "&appid=" + APIKey;
 
+// "https://api.openweathermap.org/data/2.5/weather?q=Seattle&appid=" + APIKey;
 var cityLatLong = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchCityEl + "&limit=5&appid=" + APIKey;
 // "api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" + APIKey;
 
