@@ -59,7 +59,7 @@ function getWeather(cityName) {
 
 // function to get 5 day forecast
 // take info and display it into 5 day forecast
-"https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&units=imperial&appid="+weatherApiKey
+// "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid="+ APIKey
 
 
 // button event listener
