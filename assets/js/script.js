@@ -76,6 +76,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var todayWind = $("#wind");
                     todayWind.text(data.list[0].wind.speed);
 
+                    
+
+
                     var day1Temp = $("#day1temperature");
                     day1Temp.text(data.list[1].main.temp);
 
