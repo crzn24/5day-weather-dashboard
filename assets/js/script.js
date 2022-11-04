@@ -29,11 +29,11 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity
 
 function init() {
     var cityName = searchCityEl.value;
-    getWeather(cityName); 
+    getCity(cityName); 
 }
-
+var currentCity = "";
 //function to get weather data from city name
-function getWeather(cityName) {
+function getCity(cityName) {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
     fetch(queryURL)
         .then(function (response) {
@@ -41,21 +41,44 @@ function getWeather(cityName) {
          })
         .then(function (data) {
             console.log(data);
-            
+            console.log(cityName);
             var lat = data.coord.lat;
             var lon = data.coord.lon;
+            
+            console.log(currentCity);
+            getWeather(lat, lon);
             //get lat and long and display into html
             // take information given and display it in the dashboard 
 
-            var newQueryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey;
+})        
+};
 
-            temperatureEl.innerHTML
+function getWeather(lat, lon) {
 
-        })
-        
+
+var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey;
+            fetch(newQueryURL)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+                    var todayCity = $("#current-city");
+                    todayCity.text(data.city.name);
+                    var todayTemp = $("#temperature");
+                    todayTemp.text(data.list[0].main.temp);
+                    var todayHumidity = $("#humidity");
+                    todayHumidity.text(data.list[0].main.humidity);
+                    var todayWind = $("#wind");
+                    todayWind.text(data.list[0].wind.speed);
+
+                    var day1Temp = $("#day1temperature");
+                    day1Temp.text(data.list[1].main.temp);
+                    
+                })
+            // temperatureEl.innerHTML = "Temperature: " + (data.main.temp) + " &#176F";
+
 }
-
-
 
 // function to get 5 day forecast
 // take info and display it into 5 day forecast
