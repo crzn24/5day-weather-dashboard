@@ -32,7 +32,7 @@ function init() {
     getWeather(cityName); 
 }
 
-
+//function to get weather data from city name
 function getWeather(cityName) {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
     fetch(queryURL)
@@ -45,6 +45,11 @@ function getWeather(cityName) {
             var lat = data.coord.lat;
             var lon = data.coord.lon;
             //get lat and long and display into html
+            // take information given and display it in the dashboard 
+
+            var newQueryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey;
+
+            temperatureEl.innerHTML
 
         })
         
@@ -52,14 +57,8 @@ function getWeather(cityName) {
 
 
 
-// take information given and display it in the dashboard 
-
-
-
 // function to get 5 day forecast
-
 // take info and display it into 5 day forecast
-
 
 
 
