@@ -27,25 +27,27 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity
 // "api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" + APIKey;
 
 
+function init() {
+    var cityName = searchCityEl.value;
+    getWeather(cityName); 
+}
 
 
-
-function getWeather() {
-    
+function getWeather(cityName) {
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
     fetch(queryURL)
         .then(function (response) {
             return response.json();
          })
         .then(function (data) {
             console.log(data);
+            
+            var lat = data.coord.lat;
+            var lon = data.coord.lon;
+            //get lat and long and display into html
+
         })
-
-
-
-var lat = response.data.coord.lat;
-var lon = response.data.coord.lon;
-
-
+        
 }
 
 
@@ -62,7 +64,7 @@ var lon = response.data.coord.lon;
 
 
 // button event listener
-searchBtn.addEventListener("click", getWeather);
+searchBtn.addEventListener("click", init);
 
 
 
