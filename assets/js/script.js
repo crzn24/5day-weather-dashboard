@@ -6,6 +6,7 @@ var pastCitiesEl = document.getElementById("past-cities");
 //selected city elements
 var todaysWeatherEl = document.getElementById("todays-weather");
 var currentCity = document.getElementById("current-city");
+var currentDateEl = document.getElementById("current-date");
 var temperatureEl = document.getElementById("temperature");
 var windEl = document.getElementById("wind");
 var humidityEl = document.getElementById("humidity");
@@ -76,7 +77,12 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var todayWind = $("#wind");
                     todayWind.text(data.list[0].wind.speed);
 
-                    
+                    //puts current date in html?
+                    // var currentDate = new Date(data.dt * 1000);
+                    // var day = currentDate.getDate();
+                    // var month = currentDate.getMonth() + 1;
+                    // var year = currentDate.getFullYear();
+                    // currentDateEl.innerHTML = data.name + " (" + month + "/" + day + "/" + year + ") ";
 
 
                     var day1Temp = $("#day1temperature");
