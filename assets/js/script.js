@@ -94,6 +94,39 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day1Humidity = $("#day1humidity");
                     day1Humidity.text(data.list[1].main.humidity);
 
+                    //day 2
+                    var day2Temp = $("#day2temperature");
+                    day2Temp.text(data.list[2].main.temp);
+                    var day2Wind = $("#day2wind");
+                    day2Wind.text(data.list[2].wind.speed);
+                    var day2Humidity = $("#day2humidity");
+                    day2Humidity.text(data.list[2].main.humidity);
+
+                    //day 3
+                    var day3Temp = $("#day3temperature");
+                    day3Temp.text(data.list[3].main.temp);
+                    var day3Wind = $("#day3wind");
+                    day3Wind.text(data.list[3].wind.speed);
+                    var day3Humidity = $("#day3humidity");
+                    day3Humidity.text(data.list[3].main.humidity);
+
+                    //day 4
+                    var day4Temp = $("#day4temperature");
+                    day4Temp.text(data.list[4].main.temp);
+                    var day4Wind = $("#day4wind");
+                    day4Wind.text(data.list[4].wind.speed);
+                    var day4Humidity = $("#day4humidity");
+                    day4Humidity.text(data.list[4].main.humidity);
+
+                    //day 5
+                    var day5Temp = $("#day5temperature");
+                    day5Temp.text(data.list[5].main.temp);
+                    var day5Wind = $("#day5wind");
+                    day5Wind.text(data.list[5].wind.speed);
+                    var day5Humidity = $("#day5humidity");
+                    day5Humidity.text(data.list[5].main.humidity);
+
+
                 })
             // temperatureEl.innerHTML = "Temperature: " + (data.main.temp) + " &#176F";
 
