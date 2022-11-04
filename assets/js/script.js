@@ -68,6 +68,7 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                 })
                 .then(function (data) {
                     console.log(data);
+                    //current day
                     var todayCity = $("#current-city");
                     todayCity.text(data.city.name);
                     var todayTemp = $("#temperature");
@@ -84,9 +85,14 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     // var year = currentDate.getFullYear();
                     // currentDateEl.innerHTML = data.name + " (" + month + "/" + day + "/" + year + ") ";
 
-
+                    /////////5 day forecast
+                    //day 1
                     var day1Temp = $("#day1temperature");
                     day1Temp.text(data.list[1].main.temp);
+                    var day1Wind = $("#day1wind");
+                    day1Wind.text(data.list[1].wind.speed);
+                    var day1Humidity = $("#day1humidity");
+                    day1Humidity.text(data.list[1].main.humidity);
 
                 })
             // temperatureEl.innerHTML = "Temperature: " + (data.main.temp) + " &#176F";
