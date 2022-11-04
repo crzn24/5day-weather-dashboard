@@ -72,11 +72,11 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var todayCity = $("#current-city");
                     todayCity.text(data.city.name);
                     var todayTemp = $("#temperature");
-                    todayTemp.text(data.list[0].main.temp);
+                    todayTemp.text("Temp: " + data.list[0].main.temp + "°F")
                     var todayHumidity = $("#humidity");
-                    todayHumidity.text(data.list[0].main.humidity);
+                    todayHumidity.text("Humidity: " + data.list[0].main.humidity + "%");
                     var todayWind = $("#wind");
-                    todayWind.text(data.list[0].wind.speed);
+                    todayWind.text("Wind: " + data.list[0].wind.speed + "MPH");
 
                     //puts current date in html?
                     // var currentDate = new Date(data.dt * 1000);
