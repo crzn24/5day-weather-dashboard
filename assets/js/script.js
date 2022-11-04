@@ -93,6 +93,8 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     day1Wind.text(data.list[1].wind.speed);
                     var day1Humidity = $("#day1humidity");
                     day1Humidity.text(data.list[1].main.humidity);
+                    // var day1Date = $("#day1date")
+                    // day1Date.text(data.list[1].dt);
 
                     //day 2
                     var day2Temp = $("#day2temperature");
