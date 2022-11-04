@@ -32,7 +32,7 @@ function init() {
     var cityName = searchCityEl.value;
     getCity(cityName); 
 }
-var currentCity = "";
+
 //function to get weather data from city name
 function getCity(cityName) {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
