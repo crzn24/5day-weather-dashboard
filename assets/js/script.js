@@ -200,6 +200,7 @@ function renderSearchHistory() {
         historyItem.setAttribute("class", "form-control d-block bg-white");
         historyItem.setAttribute("value", searchHistoryArray[i]);
         historyItem.addEventListener("click", function () {
+            console.log(historyItem.value);
             getCity(historyItem.value);
             getWeather(historyItem.value);
         })
@@ -210,18 +211,12 @@ function renderSearchHistory() {
 
 // save to local storage city name only
 
-
-
-
-
 searchBtn.addEventListener("click", function () {
     var searchTerm = searchCityEl.value;
     searchHistoryArray.push(searchTerm);
     localStorage.setItem("search", JSON.stringify(searchHistoryArray));
     renderSearchHistory();
 });
-
-
 
 
 init();
