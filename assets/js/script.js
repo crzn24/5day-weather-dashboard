@@ -71,24 +71,19 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     todayCity.text(data.city.name);
                     //temp and convert from Kelvin to F
                     var todayTemp = $("#temperature");
-                    var tempK0 = data.list[0].main.temp
+                    var tempK0 = data.list[0].main.temp;
                     var tempF0 = ((tempK0 - 273.15) * 1.8 +32).toFixed(0);
-                    todayTemp.text("Temp: " + tempF0 + "°F")
+                    todayTemp.text("Temp: " + tempF0 + "°F");
                     //humidity and wind
                     var todayHumidity = $("#humidity");
                     todayHumidity.text("Humidity: " + data.list[0].main.humidity + " %");
                     var todayWind = $("#wind");
                     todayWind.text("Wind: " + data.list[0].wind.speed + " MPH");
                     //weather icon
-                    
                     var currentIcon = data.list[0].weather[0].icon;
                     var icon0Url = "https://openweathermap.org/img/w/" + currentIcon + ".png";
                     $("#current-image").html("<img src='" + icon0Url  + "'>");
-                    
-                    // var currentImage = $("#current-image");
-                    // currentImage.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png");
-                        // data.list[0].weather[0].icon
-
+                
 
                     //puts current date in html?
                     // var currentDate = new Date(data.dt * 1000);
@@ -102,7 +97,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
 
                     //day 1
                     var day1Temp = $("#day1temperature");
-                    day1Temp.text(data.list[1].main.temp);
+                    var tempK1 = data.list[1].main.temp;
+                    var tempF1 = ((tempK1 - 273.15) * 1.8 +32).toFixed(0);
+                    day1Temp.text("Temp: " + tempF1 + "°F");
                     var day1Wind = $("#day1wind");
                     day1Wind.text(data.list[1].wind.speed);
                     var day1Humidity = $("#day1humidity");
@@ -112,7 +109,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
 
                     //day 2
                     var day2Temp = $("#day2temperature");
-                    day2Temp.text(data.list[2].main.temp);
+                    var tempK2 = data.list[2].main.temp;
+                    var tempF2 = ((tempK2 - 273.15) * 1.8 +32).toFixed(0);
+                    day2Temp.text("Temp: " + tempF2 + "°F");
                     var day2Wind = $("#day2wind");
                     day2Wind.text(data.list[2].wind.speed);
                     var day2Humidity = $("#day2humidity");
@@ -120,7 +119,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
 
                     //day 3
                     var day3Temp = $("#day3temperature");
-                    day3Temp.text(data.list[3].main.temp);
+                    var tempK3 = data.list[3].main.temp;
+                    var tempF3 = ((tempK3 - 273.15) * 1.8 +32).toFixed(0);
+                    day3Temp.text("Temp: " + tempF3 + "°F");
                     var day3Wind = $("#day3wind");
                     day3Wind.text(data.list[3].wind.speed);
                     var day3Humidity = $("#day3humidity");
@@ -128,7 +129,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
 
                     //day 4
                     var day4Temp = $("#day4temperature");
-                    day4Temp.text(data.list[4].main.temp);
+                    var tempK4 = data.list[4].main.temp;
+                    var tempF4 = ((tempK4 - 273.15) * 1.8 +32).toFixed(0);
+                    day4Temp.text("Temp: " + tempF4 + "°F");
                     var day4Wind = $("#day4wind");
                     day4Wind.text(data.list[4].wind.speed);
                     var day4Humidity = $("#day4humidity");
@@ -136,7 +139,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
 
                     //day 5
                     var day5Temp = $("#day5temperature");
-                    day5Temp.text(data.list[5].main.temp);
+                    var tempK5 = data.list[5].main.temp;
+                    var tempF5 = ((tempK5 - 273.15) * 1.8 +32).toFixed(0);
+                    day5Temp.text("Temp: " + tempF5 + "°F");
                     var day5Wind = $("#day5wind");
                     day5Wind.text(data.list[5].wind.speed);
                     var day5Humidity = $("#day5humidity");
