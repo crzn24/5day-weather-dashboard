@@ -11,6 +11,8 @@ var temperatureEl = document.getElementById("temperature");
 var windEl = document.getElementById("wind");
 var humidityEl = document.getElementById("humidity");
 
+var title5DayEl = document.getElementById("title5day");
+var todayEl = document.getElementById("today");
 //API key for weather
 const APIKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
@@ -57,6 +59,8 @@ function getCity(cityName) {
             var lat = data.coord.lat;
             var lon = data.coord.lon;
             
+            todayEl.classList.remove("d-none");
+
              ///////////current day//////////////////
              var todayCity = $("#current-city");
              todayCity.text(data.name);
@@ -99,6 +103,7 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                 .then(function (data) {
                     console.log(data);
                    
+                    title5DayEl.classList.remove("d-none");
                     //////// 5 day forecast///////////
                     // take info and display it into 5 day forecast
 

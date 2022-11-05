@@ -46,64 +46,74 @@
           <form id="past-cities"></form>
         </div>
 
-        <!-- Area for selected city weather info -->
-        <div class="col-9 card">
-          <div class="card-body" id="todays-weather">
-            <h3 id="current-city"></h3>
-            <p id="current-date" class="font-weight-bold"></p>
-            <img id="current-image" />
-            <p id="temperature"></p>
-            <p id="wind"></p>
-            <p id="humidity"></p>
+        <div class="col-9">
+          <!-- Area for selected city weather info -->
+          <div>
+            <div>
+              <div class="card col-11 d-none" id="today">
+                <div class="card-body" id="todays-weather">
+                  <h3 id="current-city"></h3>
+                  <p id="current-date" class="font-weight-bold"></p>
+                  <img id="current-image" />
+                  <p id="temperature"></p>
+                  <p id="wind"></p>
+                  <p id="humidity"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Area for 5-Day Forecast -->
+          <div class="row d-none" id="title5day">
+            <div class="col-12">
+              <h3>5-Day Forecast:</h3>
+            </div>
+          </div>
+
+          <!-- Day 1 -->
+          <div class="row">
+            <div class="col-2 bg-secondary m-1">
+              <p id="day1date" class="font-weight-bold"></p>
+              <img id="imgday1" />
+              <p id="day1temperature"></p>
+              <p id="day1wind"></p>
+              <p id="day1humidity"></p>
+            </div>
+            <!-- Day 2 -->
+            <div class="col-2 bg-secondary m-1">
+              <p id="day2date" class="font-weight-bold"></p>
+              <img id="imgday2" />
+              <p id="day2temperature"></p>
+              <p id="day2wind"></p>
+              <p id="day2humidity"></p>
+            </div>
+            <!-- Day 3 -->
+            <div class="col-2 bg-secondary m-1">
+              <p id="day3date" class="font-weight-bold"></p>
+              <img id="imgday3" />
+              <p id="day3temperature"></p>
+              <p id="day3wind"></p>
+              <p id="day3humidity"></p>
+            </div>
+            <!-- Day 4 -->
+            <div class="col-2 bg-secondary m-1">
+              <p id="day4date" class="font-weight-bold"></p>
+              <img id="imgday4" />
+              <p id="day4temperature"></p>
+              <p id="day4wind"></p>
+              <p id="day4humidity"></p>
+            </div>
+            <!-- Day 5 -->
+            <div class="col-2 bg-secondary m-1">
+              <p id="day5date" class="font-weight-bold"></p>
+              <img id="imgday5" />
+              <p id="day5temperature"></p>
+              <p id="day5wind"></p>
+              <p id="day5humidity"></p>
+            </div>
           </div>
         </div>
 
-        <!-- Area for 5-Day Forecast -->
-        <div class="col-12 bg-primary row">
-          <h3>5-Day Forecast:</h3>
-        </div>
-        <!-- Day 1 -->
-        <div class="row">
-          <div class="col-2 bg-secondary m-1">
-            <p id="day1date" class="font-weight-bold"></p>
-            <img id="imgday1" />
-            <p id="day1temperature"></p>
-            <p id="day1wind"></p>
-            <p id="day1humidity"></p>
-          </div>
-          <!-- Day 2 -->
-          <div class="col-2 bg-secondary m-1">
-            <p id="day2date" class="font-weight-bold"></p>
-            <img id="imgday2" />
-            <p id="day2temperature"></p>
-            <p id="day2wind"></p>
-            <p id="day2humidity"></p>
-          </div>
-          <!-- Day 3 -->
-          <div class="col-2 bg-secondary m-1">
-            <p id="day3date" class="font-weight-bold"></p>
-            <img id="imgday3" />
-            <p id="day3temperature"></p>
-            <p id="day3wind"></p>
-            <p id="day3humidity"></p>
-          </div>
-          <!-- Day 4 -->
-          <div class="col-2 bg-secondary m-1">
-            <p id="day4date" class="font-weight-bold"></p>
-            <img id="imgday4" />
-            <p id="day4temperature"></p>
-            <p id="day4wind"></p>
-            <p id="day4humidity"></p>
-          </div>
-          <!-- Day 5 -->
-          <div class="col-2 bg-secondary m-1">
-            <p id="day5date" class="font-weight-bold"></p>
-            <img id="imgday5" />
-            <p id="day5temperature"></p>
-            <p id="day5wind"></p>
-            <p id="day5humidity"></p>
-          </div>
-        </div>
       </div>
     </div>
 
