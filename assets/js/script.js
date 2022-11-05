@@ -24,6 +24,7 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity
 //////function that will run when opening page
 function init() {
     //get items from local storage
+    renderSearchHistory();
 }
 
 //////function that runs when button is clicked
