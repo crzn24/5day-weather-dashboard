@@ -3,6 +3,7 @@
 var searchCityEl = document.getElementById("search-city");
 var searchBtn = document.getElementById("search-button");
 var pastCitiesEl = document.getElementById("past-cities");
+var clearBtn = document.getElementById("clear-history-btn");
 //selected city elements
 var todaysWeatherEl = document.getElementById("todays-weather");
 var currentCity = document.getElementById("current-city");
@@ -199,8 +200,8 @@ searchBtn.addEventListener("click", clickSearch);
 
 
 ////// Local Storage /////////
+// save to local storage city name only
 // get from local storage to show history
-// function getHistory {
 // var searchHistoryArray = []
 var searchHistoryArray = JSON.parse(localStorage.getItem("search")) || [];
 
@@ -224,12 +225,19 @@ function renderSearchHistory() {
 }
 
 
-// save to local storage city name only
-
+//adds new search to local storage array and refreshes the list
 searchBtn.addEventListener("click", function () {
     var searchTerm = searchCityEl.value;
     searchHistoryArray.push(searchTerm);
     localStorage.setItem("search", JSON.stringify(searchHistoryArray));
+    renderSearchHistory();
+});
+
+//function to clear search history list and refresh list
+clearBtn.addEventListener("click", function() {
+    localStorage.clear();
+    // this makes the list dissappear. without it, it would remain on page until you refresh again v
+    searchHistoryArray = [];
     renderSearchHistory();
 });
 
