@@ -202,7 +202,7 @@ var searchHistory = JSON.parse(localStorage.getItem("search"))
 var searchTerm = searchCityEl.value;
 searchHistoryArray.push(searchTerm);
 localStorage.setItem("search", JSON.stringify(searchHistory));
-// renderSearchHistory();
+renderSearchHistory();
 
 
 
