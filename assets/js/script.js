@@ -40,7 +40,7 @@ function dateConverter(currentDate) {
     var year = a.getFullYear();
     var month = months[a.getMonth()];
     var day = a.getDate();
-    var time = month + ' ' + day + ' ' +  year;
+    var time = month + ' ' + day + ', ' +  year;
     return time;
 }
 
@@ -114,8 +114,8 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day1Icon = data.list[5].weather[0].icon;
                     var icon1Url = "https://openweathermap.org/img/w/" + day1Icon + ".png";
                     document.getElementById("imgday1").src = icon1Url;
-                    var day1Date = data.list[5].dt_txt;
-                    $("#day1date").html(day1Date);
+                    var day1Date = data.list[5].dt;
+                    $("#day1date").html(dateConverter(day1Date));
                    
 
 
@@ -131,8 +131,8 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day2Icon = data.list[13].weather[0].icon;
                     var icon2Url = "https://openweathermap.org/img/w/" + day2Icon + ".png";
                     document.getElementById("imgday2").src = icon2Url;
-                    var day2Date = data.list[13].dt_txt;
-                    $("#day2date").html(day2Date);
+                    var day2Date = data.list[13].dt;
+                    $("#day2date").html(dateConverter(day2Date));
 
                     //day 3
                     var day3Temp = $("#day3temperature");
@@ -146,8 +146,8 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day3Icon = data.list[21].weather[0].icon;
                     var icon3Url = "https://openweathermap.org/img/w/" + day3Icon + ".png";
                     document.getElementById("imgday3").src = icon3Url;
-                    var day3Date = data.list[21].dt_txt;
-                    $("#day3date").html(day3Date);
+                    var day3Date = data.list[21].dt;
+                    $("#day3date").html(dateConverter(day3Date));
 
                     //day 4
                     var day4Temp = $("#day4temperature");
@@ -161,8 +161,8 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day4Icon = data.list[29].weather[0].icon;
                     var icon4Url = "https://openweathermap.org/img/w/" + day4Icon + ".png";
                     document.getElementById("imgday4").src = icon4Url;
-                    var day4Date = data.list[29].dt_txt;
-                    $("#day4date").html(day4Date);
+                    var day4Date = data.list[29].dt;
+                    $("#day4date").html(dateConverter(day4Date));
 
                     //day 5
                     var day5Temp = $("#day5temperature");
@@ -176,8 +176,8 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day5Icon = data.list[37].weather[0].icon;
                     var icon5Url = "https://openweathermap.org/img/w/" + day5Icon + ".png";
                     document.getElementById("imgday5").src = icon5Url;
-                    var day5Date = data.list[37].dt_txt;
-                    $("#day5date").html(day5Date);
+                    var day5Date = data.list[37].dt;
+                    $("#day5date").html(dateConverter(day5Date));
                 })
             
 
