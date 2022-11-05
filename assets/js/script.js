@@ -54,10 +54,8 @@ function getCity(cityName) {
 })        
 };
 
-// function kelvinConvert(K) {
-//     return Math.floor((K - 273.15) * 1.8 + 32);
-// }
 
+//function to get current day weather and 5 day forecast
 function getWeather(lat, lon) {
 
 
@@ -89,7 +87,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     // var year = currentDate.getFullYear();
                     // currentDateEl.innerHTML = data.name + " (" + month + "/" + day + "/" + year + ") ";
 
-                    /////////5 day forecast
+                    //////// 5 day forecast///////////
+                    // take info and display it into 5 day forecast
+
                     //day 1
                     var day1Temp = $("#day1temperature");
                     day1Temp.text(data.list[1].main.temp);
@@ -134,13 +134,10 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
 
 
                 })
-            // temperatureEl.innerHTML = "Temperature: " + (data.main.temp) + " &#176F";
+            
 
 }
 
-// function to get 5 day forecast
-// take info and display it into 5 day forecast
-// "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid="+ APIKey
 
 
 // button event listener
