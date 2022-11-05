@@ -63,13 +63,19 @@ function getCity(cityName) {
              document.getElementById("current-image").src = icon0Url;
              //date
              var currentDate = data.dt;
-             $("#current-date").html(currentDate);
-                // var currentDate = new Date(data.list[0].dt * 1000);
-                    // var day = currentDate.getDate();
-                    // var month = currentDate.getMonth() + 1;
-                    // var year = currentDate.getFullYear();
-                    // currentDateEl.innerHTML = " (" + month + "/" + day + "/" + year + ") ";
-
+             $("#current-date").html(dateConverter(currentDate));
+              
+            //converts dt into better format to read
+            function dateConverter(currentDate) {
+                var a = new Date(currentDate * 1000);
+                var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                var year = a.getFullYear();
+                var month = months[a.getMonth()];
+                var day = a.getDate();
+                var time = month + ' ' + day + ' ' +  year;
+                return time;
+            }
+                
 
             getWeather(lat, lon);
             //get lat and long and display into html
