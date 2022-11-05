@@ -79,6 +79,16 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     todayHumidity.text("Humidity: " + data.list[0].main.humidity + " %");
                     var todayWind = $("#wind");
                     todayWind.text("Wind: " + data.list[0].wind.speed + " MPH");
+                    //weather icon
+                    
+                    var currentIcon = data.list[0].weather[0].icon;
+                    var icon0Url = "https://openweathermap.org/img/w/" + currentIcon + ".png";
+                    $("#current-image").html("<img src='" + icon0Url  + "'>");
+                    
+                    // var currentImage = $("#current-image");
+                    // currentImage.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png");
+                        // data.list[0].weather[0].icon
+
 
                     //puts current date in html?
                     // var currentDate = new Date(data.dt * 1000);
