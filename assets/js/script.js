@@ -33,6 +33,17 @@ function clickSearch() {
     getCity(cityName); 
 }
 
+//converts dt into better format to read
+function dateConverter(currentDate) {
+    var a = new Date(currentDate * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var day = a.getDate();
+    var time = month + ' ' + day + ' ' +  year;
+    return time;
+}
+
 //function to get current weather data from city name
 function getCity(cityName) {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
@@ -66,16 +77,6 @@ function getCity(cityName) {
              var currentDate = data.dt;
              $("#current-date").html(dateConverter(currentDate));
               
-            //converts dt into better format to read
-            function dateConverter(currentDate) {
-                var a = new Date(currentDate * 1000);
-                var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-                var year = a.getFullYear();
-                var month = months[a.getMonth()];
-                var day = a.getDate();
-                var time = month + ' ' + day + ' ' +  year;
-                return time;
-            }
                 
 
             getWeather(lat, lon);
