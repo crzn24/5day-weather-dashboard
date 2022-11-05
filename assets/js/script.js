@@ -20,19 +20,16 @@ const APIKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCityEl + "&appid=" + APIKey;
 
-var searchHistory = JSON.parse(localStorage.getItem("search"))
 
+//////function that will run when opening page
+function init() {
+    //get items from local storage
+}
 
+//////function that runs when button is clicked
 function clickSearch() {
     var cityName = searchCityEl.value;
     getCity(cityName); 
-
-    //local storage store
-    // var searchTerm = searchCityEl.value;
-    // getWeather(searchTerm);
-    // searchHistory.push(searchTerm);
-    // localStorage.setItem("search", JSON.stringify(searchHistory));
-    // renderSearchHistory();
 }
 
 //function to get current weather data from city name
@@ -190,13 +187,23 @@ searchBtn.addEventListener("click", clickSearch);
 // get from local storage to show history
 // function getHistory {
 
+function renderSearchHistory() {
 
+}
 
 
 // save to local storage city name only
 
- // var searchTerm = searchCityEl.value;
-    // getWeather(searchTerm);
-    // searchHistory.push(searchTerm);
-    // localStorage.setItem("search", JSON.stringify(searchHistory));
-    // renderSearchHistory();
+
+var searchHistoryArray = []
+
+var searchHistory = JSON.parse(localStorage.getItem("search"))
+
+var searchTerm = searchCityEl.value;
+searchHistoryArray.push(searchTerm);
+localStorage.setItem("search", JSON.stringify(searchHistory));
+// renderSearchHistory();
+
+
+
+init();
