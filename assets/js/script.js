@@ -13,6 +13,7 @@ var humidityEl = document.getElementById("humidity");
 
 var title5DayEl = document.getElementById("title5day");
 var todayEl = document.getElementById("today");
+var fiveBoxesEl = document.getElementById("5boxes");
 //API key for weather
 const APIKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
@@ -104,6 +105,7 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     console.log(data);
                    
                     title5DayEl.classList.remove("d-none");
+                    fiveBoxesEl.classList.remove("d-none");
                     //////// 5 day forecast///////////
                     // take info and display it into 5 day forecast
 
