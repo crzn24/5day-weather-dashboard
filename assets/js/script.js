@@ -186,18 +186,19 @@ searchBtn.addEventListener("click", clickSearch);
 ////// Local Storage /////////
 // get from local storage to show history
 // function getHistory {
-var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+// var searchHistoryArray = []
+var searchHistoryArray = JSON.parse(localStorage.getItem("search")) || [];
 
 
 //function that will load list and allow you to click on past searches
 function renderSearchHistory() {
     pastCitiesEl.innerHTML = "";
-    for (let i = 0; i < searchHistory.length; i++) {
+    for (let i = 0; i < searchHistoryArray.length; i++) {
         var historyItem = document.createElement("input");
         historyItem.setAttribute("type", "text");
         historyItem.setAttribute("readonly", true);
         historyItem.setAttribute("class", "form-control d-block bg-white");
-        historyItem.setAttribute("value", searchHistory[i]);
+        historyItem.setAttribute("value", searchHistoryArray[i]);
         historyItem.addEventListener("click", function () {
             getCity(historyItem.value);
             getWeather(historyItem.value);
@@ -210,14 +211,16 @@ function renderSearchHistory() {
 // save to local storage city name only
 
 
-var searchHistoryArray = []
 
 
 
-var searchTerm = searchCityEl.value;
-searchHistoryArray.push(searchTerm);
-localStorage.setItem("search", JSON.stringify(searchHistory));
-renderSearchHistory();
+searchBtn.addEventListener("click", function () {
+    var searchTerm = searchCityEl.value;
+    searchHistoryArray.push(searchTerm);
+    localStorage.setItem("search", JSON.stringify(searchHistoryArray));
+    renderSearchHistory();
+});
+
 
 
 
