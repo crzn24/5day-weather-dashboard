@@ -68,11 +68,15 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                 })
                 .then(function (data) {
                     console.log(data);
-                    //current day
+                    ///////////current day//////////////////
                     var todayCity = $("#current-city");
                     todayCity.text(data.city.name);
+                    //temp and convert from Kelvin to F
                     var todayTemp = $("#temperature");
-                    todayTemp.text("Temp: " + data.list[0].main.temp + "°F")
+                    var tempK0 = data.list[0].main.temp
+                    var tempF0 = ((tempK0 - 273.15) * 1.8 +32).toFixed(0);
+                    todayTemp.text("Temp: " + tempF0 + "°F")
+                    //humidity and wind
                     var todayHumidity = $("#humidity");
                     todayHumidity.text("Humidity: " + data.list[0].main.humidity + "%");
                     var todayWind = $("#wind");
