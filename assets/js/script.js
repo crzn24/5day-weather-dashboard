@@ -78,9 +78,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     todayTemp.text("Temp: " + tempF0 + "°F")
                     //humidity and wind
                     var todayHumidity = $("#humidity");
-                    todayHumidity.text("Humidity: " + data.list[0].main.humidity + "%");
+                    todayHumidity.text("Humidity: " + data.list[0].main.humidity + " %");
                     var todayWind = $("#wind");
-                    todayWind.text("Wind: " + data.list[0].wind.speed + "MPH");
+                    todayWind.text("Wind: " + data.list[0].wind.speed + " MPH");
 
                     //puts current date in html?
                     // var currentDate = new Date(data.dt * 1000);
