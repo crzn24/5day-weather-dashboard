@@ -27,10 +27,18 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity
 // var cityLatLong = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchCityEl + "&limit=5&appid=" + APIKey;
 // "api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" + APIKey;
 
+var searchHistory = JSON.parse(localStorage.getItem("search"))
 
 function init() {
     var cityName = searchCityEl.value;
     getCity(cityName); 
+
+    //local storage store
+    // var searchTerm = searchCityEl.value;
+    // getWeather(searchTerm);
+    // searchHistory.push(searchTerm);
+    // localStorage.setItem("search", JSON.stringify(searchHistory));
+    // renderSearchHistory();
 }
 
 //function to get weather data from city name
@@ -192,11 +200,8 @@ searchBtn.addEventListener("click", init);
 // get from local storage to show history
 // function getHistory {
 
-// }
+
+
 
 // save to local storage city name only
-
-
-
-
 
