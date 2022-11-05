@@ -62,8 +62,24 @@ function getCity(cityName) {
              var tempK0 = data.main.temp;
              var tempF0 = ((tempK0 - 273.15) * 1.8 +32).toFixed(0);
              todayTemp.text("Temp: " + tempF0 + "°F");
+             var todayHumidity = $("#humidity");
+             todayHumidity.text("Humidity: " + data.main.humidity + " %");
+             var todayWind = $("#wind");
+             todayWind.text("Wind: " + data.wind.speed + " MPH");
+             //weather icon
+             var currentIcon = data.weather[0].icon;
+             var icon0Url = "https://openweathermap.org/img/w/" + currentIcon + ".png";
+             document.getElementById("current-image").src = icon0Url;
+             //date
+             var currentDate = data.dt;
+             $("#current-date").html(currentDate);
+                // var currentDate = new Date(data.list[0].dt * 1000);
+                    // var day = currentDate.getDate();
+                    // var month = currentDate.getMonth() + 1;
+                    // var year = currentDate.getFullYear();
+                    // currentDateEl.innerHTML = " (" + month + "/" + day + "/" + year + ") ";
 
-        
+
             getWeather(lat, lon);
             //get lat and long and display into html
             // take information given and display it in the dashboard 
@@ -83,36 +99,7 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                 })
                 .then(function (data) {
                     console.log(data);
-                    // ///////////current day//////////////////
-                    // var todayCity = $("#current-city");
-                    // todayCity.text(data.city.name);
-                    // //temp and convert from Kelvin to F
-                    // var todayTemp = $("#temperature");
-                    // var tempK0 = data.list[0].main.temp;
-                    // var tempF0 = ((tempK0 - 273.15) * 1.8 +32).toFixed(0);
-                    // todayTemp.text("Temp: " + tempF0 + "°F");
-                    //humidity and wind
-                    var todayHumidity = $("#humidity");
-                    todayHumidity.text("Humidity: " + data.list[0].main.humidity + " %");
-                    var todayWind = $("#wind");
-                    todayWind.text("Wind: " + data.list[0].wind.speed + " MPH");
-                    //weather icon
-                    var currentIcon = data.list[0].weather[0].icon;
-                    var icon0Url = "https://openweathermap.org/img/w/" + currentIcon + ".png";
-                    document.getElementById("current-image").src = icon0Url;
-    
-                    //date
-                    var currentDate = data.list[0].dt_txt;
-                    $("#current-date").html(currentDate);
-                    // var currentDate = new Date(data.list[0].dt * 1000);
-                    // var day = currentDate.getDate();
-                    // var month = currentDate.getMonth() + 1;
-                    // var year = currentDate.getFullYear();
-                    // currentDateEl.innerHTML = " (" + month + "/" + day + "/" + year + ") ";
-
-
-
-
+                   
                     //////// 5 day forecast///////////
                     // take info and display it into 5 day forecast
 
