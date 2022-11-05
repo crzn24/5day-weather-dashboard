@@ -16,16 +16,9 @@ const APIKey = "a8bb7cc0fbe94b1d7ce387b2fe9f1984"
 
 
 /////////// function to get weather from weather api
-// https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-// https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 // call api for coordinates 
-//http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCityEl + "&appid=" + APIKey;
-
-// "https://api.openweathermap.org/data/2.5/weather?q=Seattle&appid=" + APIKey;
-// var cityLatLong = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchCityEl + "&limit=5&appid=" + APIKey;
-// "api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=" + APIKey;
 
 var searchHistory = JSON.parse(localStorage.getItem("search"))
 
