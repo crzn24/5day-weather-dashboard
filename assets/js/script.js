@@ -82,8 +82,8 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     //weather icon
                     var currentIcon = data.list[0].weather[0].icon;
                     var icon0Url = "https://openweathermap.org/img/w/" + currentIcon + ".png";
-                    $("#current-image").html("<img src='" + icon0Url  + "'>");
-                
+                    document.getElementById("current-image").src = icon0Url;
+    
 
                     //puts current date in html?
                     // var currentDate = new Date(data.dt * 1000);
