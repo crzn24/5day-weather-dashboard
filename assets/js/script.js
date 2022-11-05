@@ -84,14 +84,18 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var icon0Url = "https://openweathermap.org/img/w/" + currentIcon + ".png";
                     document.getElementById("current-image").src = icon0Url;
     
-
-                    //puts current date in html?
-                    // var currentDate = new Date(data.dt * 1000);
+                    //date
+                    var currentDate = data.list[0].dt_txt;
+                    $("#current-date").html(currentDate);
+                    // var currentDate = new Date(data.list[0].dt * 1000);
                     // var day = currentDate.getDate();
                     // var month = currentDate.getMonth() + 1;
                     // var year = currentDate.getFullYear();
-                    // currentDateEl.innerHTML = data.name + " (" + month + "/" + day + "/" + year + ") ";
+                    // currentDateEl.innerHTML = " (" + month + "/" + day + "/" + year + ") ";
 
+
+
+                    
                     //////// 5 day forecast///////////
                     // take info and display it into 5 day forecast
 
@@ -107,8 +111,10 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day1Icon = data.list[1].weather[0].icon;
                     var icon1Url = "https://openweathermap.org/img/w/" + day1Icon + ".png";
                     document.getElementById("imgday1").src = icon1Url;
-                    // var day1Date = $("#day1date")
-                    // day1Date.text(data.list[1].dt);
+                    var day1Date = data.list[1].dt_txt;
+                    $("#day1date").html(day1Date);
+                   
+
 
                     //day 2
                     var day2Temp = $("#day2temperature");
@@ -122,6 +128,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day2Icon = data.list[2].weather[0].icon;
                     var icon2Url = "https://openweathermap.org/img/w/" + day2Icon + ".png";
                     document.getElementById("imgday2").src = icon2Url;
+                    var day2Date = data.list[2].dt_txt;
+                    $("#day2date").html(day2Date);
+
                     //day 3
                     var day3Temp = $("#day3temperature");
                     var tempK3 = data.list[3].main.temp;
@@ -134,6 +143,7 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day3Icon = data.list[3].weather[0].icon;
                     var icon3Url = "https://openweathermap.org/img/w/" + day3Icon + ".png";
                     document.getElementById("imgday3").src = icon3Url;
+                    
                     //day 4
                     var day4Temp = $("#day4temperature");
                     var tempK4 = data.list[4].main.temp;
@@ -146,6 +156,7 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var day4Icon = data.list[4].weather[0].icon;
                     var icon4Url = "https://openweathermap.org/img/w/" + day4Icon + ".png";
                     document.getElementById("imgday4").src = icon4Url;
+                    
                     //day 5
                     var day5Temp = $("#day5temperature");
                     var tempK5 = data.list[5].main.temp;
