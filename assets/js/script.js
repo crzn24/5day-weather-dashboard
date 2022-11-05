@@ -22,7 +22,8 @@ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity
 
 var searchHistory = JSON.parse(localStorage.getItem("search"))
 
-function init() {
+
+function clickSearch() {
     var cityName = searchCityEl.value;
     getCity(cityName); 
 
@@ -180,7 +181,7 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
 
 
 // button event listener
-searchBtn.addEventListener("click", init);
+searchBtn.addEventListener("click", clickSearch);
 
 
 
@@ -194,3 +195,8 @@ searchBtn.addEventListener("click", init);
 
 // save to local storage city name only
 
+ // var searchTerm = searchCityEl.value;
+    // getWeather(searchTerm);
+    // searchHistory.push(searchTerm);
+    // localStorage.setItem("search", JSON.stringify(searchHistory));
+    // renderSearchHistory();
