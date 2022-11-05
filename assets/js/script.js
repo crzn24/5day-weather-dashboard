@@ -101,9 +101,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var tempF1 = ((tempK1 - 273.15) * 1.8 +32).toFixed(0);
                     day1Temp.text("Temp: " + tempF1 + "°F");
                     var day1Wind = $("#day1wind");
-                    day1Wind.text(data.list[1].wind.speed);
+                    day1Wind.text("Wind: " + data.list[1].wind.speed + " MPH");
                     var day1Humidity = $("#day1humidity");
-                    day1Humidity.text(data.list[1].main.humidity);
+                    day1Humidity.text("Humidity: " + data.list[1].main.humidity + " %");
                     // var day1Date = $("#day1date")
                     // day1Date.text(data.list[1].dt);
 
@@ -113,9 +113,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var tempF2 = ((tempK2 - 273.15) * 1.8 +32).toFixed(0);
                     day2Temp.text("Temp: " + tempF2 + "°F");
                     var day2Wind = $("#day2wind");
-                    day2Wind.text(data.list[2].wind.speed);
+                    day2Wind.text("Wind: " + data.list[2].wind.speed + " MPH");
                     var day2Humidity = $("#day2humidity");
-                    day2Humidity.text(data.list[2].main.humidity);
+                    day2Humidity.text("Humidity: " + data.list[2].main.humidity + " %");
 
                     //day 3
                     var day3Temp = $("#day3temperature");
@@ -123,9 +123,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var tempF3 = ((tempK3 - 273.15) * 1.8 +32).toFixed(0);
                     day3Temp.text("Temp: " + tempF3 + "°F");
                     var day3Wind = $("#day3wind");
-                    day3Wind.text(data.list[3].wind.speed);
+                    day3Wind.text("Wind: " + data.list[3].wind.speed + " MPH");
                     var day3Humidity = $("#day3humidity");
-                    day3Humidity.text(data.list[3].main.humidity);
+                    day3Humidity.text("Humidity: " + data.list[4].main.humidity + " %");
 
                     //day 4
                     var day4Temp = $("#day4temperature");
@@ -133,9 +133,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var tempF4 = ((tempK4 - 273.15) * 1.8 +32).toFixed(0);
                     day4Temp.text("Temp: " + tempF4 + "°F");
                     var day4Wind = $("#day4wind");
-                    day4Wind.text(data.list[4].wind.speed);
+                    day4Wind.text("Wind: " + data.list[4].wind.speed + " MPH");
                     var day4Humidity = $("#day4humidity");
-                    day4Humidity.text(data.list[4].main.humidity);
+                    day4Humidity.text("Humidity: " + data.list[4].main.humidity + " %");
 
                     //day 5
                     var day5Temp = $("#day5temperature");
@@ -143,9 +143,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     var tempF5 = ((tempK5 - 273.15) * 1.8 +32).toFixed(0);
                     day5Temp.text("Temp: " + tempF5 + "°F");
                     var day5Wind = $("#day5wind");
-                    day5Wind.text(data.list[5].wind.speed);
+                    day5Wind.text("Wind: " + data.list[5].wind.speed + " MPH");
                     var day5Humidity = $("#day5humidity");
-                    day5Humidity.text(data.list[5].main.humidity);
+                    day5Humidity.text("Humidity: " + data.list[5].main.humidity + " %");
 
 
                 })
