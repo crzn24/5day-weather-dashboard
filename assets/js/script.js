@@ -95,81 +95,86 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
 
 
 
-                    
+
                     //////// 5 day forecast///////////
                     // take info and display it into 5 day forecast
 
                     //day 1
                     var day1Temp = $("#day1temperature");
-                    var tempK1 = data.list[1].main.temp;
+                    var tempK1 = data.list[3].main.temp;
                     var tempF1 = ((tempK1 - 273.15) * 1.8 +32).toFixed(0);
                     day1Temp.text("Temp: " + tempF1 + "°F");
                     var day1Wind = $("#day1wind");
-                    day1Wind.text("Wind: " + data.list[1].wind.speed + " MPH");
+                    day1Wind.text("Wind: " + data.list[3].wind.speed + " MPH");
                     var day1Humidity = $("#day1humidity");
-                    day1Humidity.text("Humidity: " + data.list[1].main.humidity + " %");
-                    var day1Icon = data.list[1].weather[0].icon;
+                    day1Humidity.text("Humidity: " + data.list[3].main.humidity + " %");
+                    var day1Icon = data.list[3].weather[0].icon;
                     var icon1Url = "https://openweathermap.org/img/w/" + day1Icon + ".png";
                     document.getElementById("imgday1").src = icon1Url;
-                    var day1Date = data.list[1].dt_txt;
+                    var day1Date = data.list[3].dt_txt;
                     $("#day1date").html(day1Date);
                    
 
 
                     //day 2
                     var day2Temp = $("#day2temperature");
-                    var tempK2 = data.list[2].main.temp;
+                    var tempK2 = data.list[11].main.temp;
                     var tempF2 = ((tempK2 - 273.15) * 1.8 +32).toFixed(0);
                     day2Temp.text("Temp: " + tempF2 + "°F");
                     var day2Wind = $("#day2wind");
-                    day2Wind.text("Wind: " + data.list[2].wind.speed + " MPH");
+                    day2Wind.text("Wind: " + data.list[11].wind.speed + " MPH");
                     var day2Humidity = $("#day2humidity");
-                    day2Humidity.text("Humidity: " + data.list[2].main.humidity + " %");
-                    var day2Icon = data.list[2].weather[0].icon;
+                    day2Humidity.text("Humidity: " + data.list[11].main.humidity + " %");
+                    var day2Icon = data.list[11].weather[0].icon;
                     var icon2Url = "https://openweathermap.org/img/w/" + day2Icon + ".png";
                     document.getElementById("imgday2").src = icon2Url;
-                    var day2Date = data.list[2].dt_txt;
+                    var day2Date = data.list[11].dt_txt;
                     $("#day2date").html(day2Date);
 
                     //day 3
                     var day3Temp = $("#day3temperature");
-                    var tempK3 = data.list[3].main.temp;
+                    var tempK3 = data.list[19].main.temp;
                     var tempF3 = ((tempK3 - 273.15) * 1.8 +32).toFixed(0);
                     day3Temp.text("Temp: " + tempF3 + "°F");
                     var day3Wind = $("#day3wind");
-                    day3Wind.text("Wind: " + data.list[3].wind.speed + " MPH");
+                    day3Wind.text("Wind: " + data.list[19].wind.speed + " MPH");
                     var day3Humidity = $("#day3humidity");
-                    day3Humidity.text("Humidity: " + data.list[4].main.humidity + " %");
-                    var day3Icon = data.list[3].weather[0].icon;
+                    day3Humidity.text("Humidity: " + data.list[19].main.humidity + " %");
+                    var day3Icon = data.list[19].weather[0].icon;
                     var icon3Url = "https://openweathermap.org/img/w/" + day3Icon + ".png";
                     document.getElementById("imgday3").src = icon3Url;
-                    
+                    var day3Date = data.list[19].dt_txt;
+                    $("#day3date").html(day3Date);
+
                     //day 4
                     var day4Temp = $("#day4temperature");
-                    var tempK4 = data.list[4].main.temp;
+                    var tempK4 = data.list[27].main.temp;
                     var tempF4 = ((tempK4 - 273.15) * 1.8 +32).toFixed(0);
                     day4Temp.text("Temp: " + tempF4 + "°F");
                     var day4Wind = $("#day4wind");
-                    day4Wind.text("Wind: " + data.list[4].wind.speed + " MPH");
+                    day4Wind.text("Wind: " + data.list[27].wind.speed + " MPH");
                     var day4Humidity = $("#day4humidity");
-                    day4Humidity.text("Humidity: " + data.list[4].main.humidity + " %");
-                    var day4Icon = data.list[4].weather[0].icon;
+                    day4Humidity.text("Humidity: " + data.list[27].main.humidity + " %");
+                    var day4Icon = data.list[27].weather[0].icon;
                     var icon4Url = "https://openweathermap.org/img/w/" + day4Icon + ".png";
                     document.getElementById("imgday4").src = icon4Url;
-                    
+                    var day4Date = data.list[27].dt_txt;
+                    $("#day4date").html(day4Date);
+
                     //day 5
                     var day5Temp = $("#day5temperature");
-                    var tempK5 = data.list[5].main.temp;
+                    var tempK5 = data.list[35].main.temp;
                     var tempF5 = ((tempK5 - 273.15) * 1.8 +32).toFixed(0);
                     day5Temp.text("Temp: " + tempF5 + "°F");
                     var day5Wind = $("#day5wind");
-                    day5Wind.text("Wind: " + data.list[5].wind.speed + " MPH");
+                    day5Wind.text("Wind: " + data.list[35].wind.speed + " MPH");
                     var day5Humidity = $("#day5humidity");
-                    day5Humidity.text("Humidity: " + data.list[5].main.humidity + " %");
-                    var day5Icon = data.list[5].weather[0].icon;
+                    day5Humidity.text("Humidity: " + data.list[35].main.humidity + " %");
+                    var day5Icon = data.list[35].weather[0].icon;
                     var icon5Url = "https://openweathermap.org/img/w/" + day5Icon + ".png";
                     document.getElementById("imgday5").src = icon5Url;
-
+                    var day5Date = data.list[35].dt_txt;
+                    $("#day5date").html(day5Date);
                 })
             
 
