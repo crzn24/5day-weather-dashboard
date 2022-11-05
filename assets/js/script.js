@@ -104,6 +104,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     day1Wind.text("Wind: " + data.list[1].wind.speed + " MPH");
                     var day1Humidity = $("#day1humidity");
                     day1Humidity.text("Humidity: " + data.list[1].main.humidity + " %");
+                    var day1Icon = data.list[1].weather[0].icon;
+                    var icon1Url = "https://openweathermap.org/img/w/" + day1Icon + ".png";
+                    document.getElementById("imgday1").src = icon1Url;
                     // var day1Date = $("#day1date")
                     // day1Date.text(data.list[1].dt);
 
@@ -116,7 +119,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     day2Wind.text("Wind: " + data.list[2].wind.speed + " MPH");
                     var day2Humidity = $("#day2humidity");
                     day2Humidity.text("Humidity: " + data.list[2].main.humidity + " %");
-
+                    var day2Icon = data.list[2].weather[0].icon;
+                    var icon2Url = "https://openweathermap.org/img/w/" + day2Icon + ".png";
+                    document.getElementById("imgday2").src = icon2Url;
                     //day 3
                     var day3Temp = $("#day3temperature");
                     var tempK3 = data.list[3].main.temp;
@@ -126,7 +131,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     day3Wind.text("Wind: " + data.list[3].wind.speed + " MPH");
                     var day3Humidity = $("#day3humidity");
                     day3Humidity.text("Humidity: " + data.list[4].main.humidity + " %");
-
+                    var day3Icon = data.list[3].weather[0].icon;
+                    var icon3Url = "https://openweathermap.org/img/w/" + day3Icon + ".png";
+                    document.getElementById("imgday3").src = icon3Url;
                     //day 4
                     var day4Temp = $("#day4temperature");
                     var tempK4 = data.list[4].main.temp;
@@ -136,7 +143,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     day4Wind.text("Wind: " + data.list[4].wind.speed + " MPH");
                     var day4Humidity = $("#day4humidity");
                     day4Humidity.text("Humidity: " + data.list[4].main.humidity + " %");
-
+                    var day4Icon = data.list[4].weather[0].icon;
+                    var icon4Url = "https://openweathermap.org/img/w/" + day4Icon + ".png";
+                    document.getElementById("imgday4").src = icon4Url;
                     //day 5
                     var day5Temp = $("#day5temperature");
                     var tempK5 = data.list[5].main.temp;
@@ -146,7 +155,9 @@ var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat 
                     day5Wind.text("Wind: " + data.list[5].wind.speed + " MPH");
                     var day5Humidity = $("#day5humidity");
                     day5Humidity.text("Humidity: " + data.list[5].main.humidity + " %");
-
+                    var day5Icon = data.list[5].weather[0].icon;
+                    var icon5Url = "https://openweathermap.org/img/w/" + day5Icon + ".png";
+                    document.getElementById("imgday5").src = icon5Url;
 
                 })
             
