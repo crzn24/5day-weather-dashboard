@@ -186,9 +186,24 @@ searchBtn.addEventListener("click", clickSearch);
 ////// Local Storage /////////
 // get from local storage to show history
 // function getHistory {
+var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
+
+//function that will load list and allow you to click on past searches
 function renderSearchHistory() {
-
+    pastCitiesEl.innerHTML = "";
+    for (let i = 0; i < searchHistory.length; i++) {
+        var historyItem = document.createElement("input");
+        historyItem.setAttribute("type", "text");
+        historyItem.setAttribute("readonly", true);
+        historyItem.setAttribute("class", "form-control d-block bg-white");
+        historyItem.setAttribute("value", searchHistory[i]);
+        historyItem.addEventListener("click", function () {
+            getCity(historyItem.value);
+            getWeather(historyItem.value);
+        })
+        pastCitiesEl.append(historyItem);
+    }
 }
 
 
@@ -197,7 +212,7 @@ function renderSearchHistory() {
 
 var searchHistoryArray = []
 
-var searchHistory = JSON.parse(localStorage.getItem("search"))
+
 
 var searchTerm = searchCityEl.value;
 searchHistoryArray.push(searchTerm);
