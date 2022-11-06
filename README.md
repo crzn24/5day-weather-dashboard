@@ -16,7 +16,7 @@ This application serves as dashboard to check the current weather as well as the
 
 
 
-![Screenshot of weather dashboard](assets/)
+![Screenshot of weather dashboard](/assets/images/weather-dashboard-screenshot.png)
 
 ## Credits
 * (Bootstrap Containers)[https://getbootstrap.com/docs/5.2/layout/containers/]
