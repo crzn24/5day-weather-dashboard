@@ -12,7 +12,7 @@ In this challenge I incorporated some jQuery if I was unsure of the syntax for J
 ## Usage
 This application serves as dashboard to check the current weather as well as the 5 day forecast for various cities that are searched. Its creation is also a way to practice JavaScript, jQuery, and use APIs.
 
-[Link to application]()
+[Link to application](https://crzn24.github.io/5day-weather-dashboard/)
 
 
 
