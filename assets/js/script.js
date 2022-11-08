@@ -60,7 +60,6 @@ function getCity(cityName) {
             console.log(cityName);
             var lat = data.coord.lat;
             var lon = data.coord.lon;
-            
             todayEl.classList.remove("d-none");
 
              ///////////current day//////////////////
@@ -94,10 +93,10 @@ function getCity(cityName) {
 
 
 //function to get 5 day forecast
-function getWeather(lat, lon) {
+function getWeather(pLat, pLon) {
 
-
-var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey;
+    
+var newQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + pLat + "&lon=" + pLon + "&appid=" + APIKey;
             fetch(newQueryURL)
                 .then(function (response) {
                     return response.json();
@@ -210,6 +209,7 @@ var searchHistoryArray = JSON.parse(localStorage.getItem("search")) || [];
 function renderSearchHistory() {
     pastCitiesEl.innerHTML = "";
     for (let i = 0; i < searchHistoryArray.length; i++) {
+        //
         var historyItem = document.createElement("input");
         historyItem.setAttribute("type", "text");
         historyItem.setAttribute("readonly", true);
@@ -218,8 +218,9 @@ function renderSearchHistory() {
         historyItem.addEventListener("click", function () {
             console.log(historyItem.value);
             getCity(historyItem.value);
-            getWeather(historyItem.value);
-        })
+            // getWeather(historyItem.value);
+            // commented out this line of code to prevent an error on the API Call but need to figure out why
+        });
         pastCitiesEl.append(historyItem);
     }
 }
