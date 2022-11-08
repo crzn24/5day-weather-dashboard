@@ -40,11 +40,11 @@ function clickSearch() {
 //converts dt into better format to read
 function dateConverter(currentDate) {
     var a = new Date(currentDate * 1000);
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var months = ['01','02','03','04','05','06','07','08','09','10','11','12'];
     var year = a.getFullYear();
     var month = months[a.getMonth()];
     var day = a.getDate();
-    var time = month + ' ' + day + ', ' +  year;
+    var time = month + ' / ' + day + ' / ' +  year;
     return time;
 }
 
