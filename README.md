@@ -19,14 +19,14 @@ This application serves as dashboard to check the current weather as well as the
 ![Screenshot of weather dashboard](/assets/images/weather-dashboard-screenshot.png)
 
 ## Credits
-* (Bootstrap Containers)[https://getbootstrap.com/docs/5.2/layout/containers/]
-* (Bootstrap Colors)[https://getbootstrap.com/docs/5.2/customize/color/]
-* (Bootstrap Cards)[https://getbootstrap.com/docs/4.0/components/card/]
-* (How to use API Keys)[https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys]
-* (OpenWeather Current Weather documentation)[https://openweathermap.org/current#one]
-* (OpenWeather 5 Day forecast documentation)[https://openweathermap.org/forecast5#5days]
-* (OpenWeather Icons)[https://openweathermap.org/weather-conditions]
-* (How to convert Unix Timestamps)[https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript]
+* [Bootstrap Containers](https://getbootstrap.com/docs/5.2/layout/containers/)
+* [Bootstrap Colors](https://getbootstrap.com/docs/5.2/customize/color/)
+* [Bootstrap Cards](https://getbootstrap.com/docs/4.0/components/card/)
+* [How to use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
+* [OpenWeather Current Weather documentation](https://openweathermap.org/current#one)
+* [OpenWeather 5 Day forecast documentation](https://openweathermap.org/forecast5#5days)
+* [OpenWeather Icons](https://openweathermap.org/weather-conditions)
+* [How to convert Unix Timestamps](https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript)
 
 
 ## License
